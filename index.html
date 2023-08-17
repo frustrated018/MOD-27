@@ -1,13 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silvergate</title>
+    <link rel="shortcut icon" href="images.png" type="image/x-icon">
+    <!-- google fonts import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS styles -->
+    <style>
+        * {
+            font-family: 'Bona Nova', serif;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Silvergate - Your gate straight to hell.</h1>
+        <section class="text-center">
+            <h1 class="text-5xl font-bold mt-6 mb-5">Silvergate</h1>
+            <p class="text-sm font-light">Your gate straight to hell. :3</p>
+        </section>
     </header>
+    <!-- header section ends here -->
+    <!-- Main section starts here -->
+    <main>
+        <section class="my-8">
+            <div class="grid grid-cols-3 gap-4 text-white mx-auto w-3/4">
+                <!-- deposit -->
+                <div class="bg-slate-800 p-8 rounded-lg">
+                    <h3 class="text-3xl ">Deposit</h3>
+                    <h4 class="text-6xl">$<span id="deposit-total">00</span></h4>
+                </div>
+                <!-- Widthraw -->
+                <div class="bg-slate-800 p-8 rounded-lg">
+                    <h3 class="text-3xl ">Widthraw</h3>
+                    <h4 class="text-6xl">$<span id="widthraw">00</span></h4>
+                </div>
+                <!-- Balance-->
+                <div class="bg-slate-800 p-8 rounded-lg">
+                    <h3 class="text-3xl ">Balance</h3>
+                    <h4 class="text-6xl">$<span id="balance-total">69</span></h4>
+                </div>
+            </div>
+        </section>
+        <!-- Deposit and Widthraw input section -->
+        <section class="my-4 w-3/4 mx-auto">
+            <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="bg-slate-900 p-10 rounded-lg">
+                    <h3 class="text-white text-4xl">Deposit Amount</h3>
+                    <!-- input field -->
+                    <input type="number" class="mt-6 p-3 w-[80%] rounded-md outline-none font-sans font-semibold" id="deposit-amount"
+                        placeholder="Please put the amount you want to deposit ">
+                    <!-- Button -->
+                    <button
+                        class="bg-slate-950 hover:bg-slate-800 text-white block mx-auto mt-6 px-5 py-3 rounded-lg text-2xl"
+                        id="btn-deposit">Deposit</button>
+                </div>
+                <div class="bg-slate-900 p-10 rounded-lg">
+                    <h3 class="text-white text-4xl">Widthraw Amount</h3>
+                    <!-- input field -->
+                    <input type="number" class="mt-6 p-3 w-[80%] rounded-md outline-none font-sans font-semibold" id="deposit-amount"
+                        placeholder="Please put the amount you want to widthraw">
+                    <!-- Button -->
+                    <button
+                        class="bg-slate-950 hover:bg-slate-800 text-white block mx-auto mt-6 px-5 py-3 rounded-lg text-2xl"
+                        id="btn-widthraw">Widthraw</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- JS linked -->
+    <script src="dash.js"></script>
 </body>
+
 </html>
